@@ -15,86 +15,112 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="form-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+    <div id="container" class="container">
+      <!-- FORM SECTION -->
+      <div class="row">
+        <!-- SIGN UP -->
+        <div class="col align-items-center flex-col sign-up">
+          <div class="form-wrapper align-items-center">
+            <div class="form sign-up">
+              <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Username">
+              </div>
+              <div class="input-group">
+                <i class='bx bx-mail-send'></i>
+                <input type="email" placeholder="Email">
+              </div>
+              <div class="input-group">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Password">
+              </div>
+              <div class="input-group">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Confirm password">
+              </div>
+              <button>
+                Sign up
+              </button>
+              <p>
+                <span>
+                  Already have an account?
+                </span>
+                <b onclick="toggle()" class="pointer">
+                  Sign in here
+                </b>
+              </p>
             </div>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="password" placeholder="password" />
-            </div>
-            <input type="submit" class="btn solid" value="login" />
-            <p class="social-text">Or Sign in with social media accounts</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-          </form>
+          </div>
+        
         </div>
-        <div class="signin-signup">
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign Up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+        <!-- END SIGN UP -->
+        <!-- SIGN IN -->
+        <div class="col align-items-center flex-col sign-in">
+          <div class="form-wrapper align-items-center">
+            <div class="form sign-in">
+              <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Username">
+              </div>
+              <div class="input-group">
+                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Password">
+              </div>
+              <button>
+                Sign in
+              </button>
+              <p>
+                <b>
+                  Forgot password?
+                </b>
+              </p>
+              <p>
+                <span>
+                  Don't have an account?
+                </span>
+                <b onclick="toggle()" class="pointer">
+                  Sign up here
+                </b>
+              </p>
             </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="password" placeholder="password" />
-            </div>
-            <input type="submit" class="btn solid" value="login" />
-            <p class="social-text">Or Sign Up with social media accounts</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-          </form>
+          </div>
+          <div class="form-wrapper">
+      
+          </div>
         </div>
+        <!-- END SIGN IN -->
       </div>
-    </div>
-    <div class="panel-container">
-      <div class="panel-left-panel">
-        <div class="content">
-          <h3>New</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, magni
-            numquam! Ducimus illo nostrum minima adipisci corrupti quidem
-            voluptas officia? Eligendi ab tenetur, veniam magni esse neque odio
-            consequatur perspiciatis.
-          </p>
-          <button class="btn-transparent" id="sign-up-button">sign Up</button>
+      <!-- END FORM SECTION -->
+      <!-- CONTENT SECTION -->
+      <div class="row content-row">
+        <!-- SIGN IN CONTENT -->
+        <div class="col align-items-center flex-col">
+          <div class="text sign-in">
+            <h2>
+              Welcome
+            </h2>
+    
+          </div>
+          <div class="img sign-in">
+      
+          </div>
         </div>
+        <!-- END SIGN IN CONTENT -->
+        <!-- SIGN UP CONTENT -->
+        <div class="col align-items-center flex-col">
+          <div class="img sign-up">
+          
+          </div>
+          <div class="text sign-up">
+            <h2>
+              Join with us
+            </h2>
+    
+          </div>
+        </div>
+        <!-- END SIGN UP CONTENT -->
       </div>
-      <!-- <img src="res/download.png" alt="" class="image"/> -->
+      <!-- END CONTENT SECTION -->
     </div>
 
     <script src="index.js"></script>
