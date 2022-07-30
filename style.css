@@ -90,6 +90,10 @@ body {
     border: 0.125rem solid var(--white);
     outline: none;
 }
+.preferences{
+    display: inline-flex;
+    font-size: 18px;
+}
 
 .input-group input:focus {
     border: 0.125rem solid var(--primary-color);
@@ -109,7 +113,7 @@ body {
 
 .form p {
     margin: 1rem 0;
-    font-size: .7rem;
+    font-size:1rem;
 }
 
 .flex-col {
