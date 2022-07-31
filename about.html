@@ -1,364 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-   
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <header
-      class="text-gray-600 body-font"
-      style="
-        background-color: lightgreen;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      "
-    >
-      <div
-        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
-      >
-        <a
-          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-            ></path>
-          </svg>
-          <span class="ml-3 text-xl">Job Portal</span>
-        </a>
-        <nav
-          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
-        >
-          <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-          <!-- <a class="mr-5 hover:text-gray-900" href="about.html">About</a> -->
-          <a class="mr-5 hover:text-gray-900" href="jobs.html">Jobs</a>
-          <a class="mr-5 hover:text-gray-900" href="contact.html">Contact</a>
+<head>
+    <meta charset="utf-8">
+    <title>JobEntry - Job Portal Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <h1 class="m-0 text-primary">JobPortal</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="job-list.html" class="dropdown-item">Job List</a>
+                            <a href="job-detail.html" class="dropdown-item">Job Detail</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="login.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">login<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
         </nav>
-        <button
-          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-          onclick="loginpage()"
-        >
-         Register
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+        <!-- Navbar End -->
 
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div class="h-full text-center">
-              <img
-                alt="testimonial"
-                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://dummyimage.com/302x302"
-              />
-              <p class="leading-relaxed">
-                Edison bulb retro cloud bread echo park, helvetica stumptown
-                taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                adaptogen squid fanny pack vaporware.
-              </p>
-              <span
-                class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"
-              ></span>
-              <h2
-                class="text-gray-900 font-medium title-font tracking-wider text-sm"
-              >
-                HOLDEN CAULFIELD
-              </h2>
-              <p class="text-gray-500">Senior Product Designer</p>
-            </div>
-          </div>
-          <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div class="h-full text-center">
-              <img
-                alt="testimonial"
-                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://dummyimage.com/300x300"
-              />
-              <p class="leading-relaxed">
-                Edison bulb retro cloud bread echo park, helvetica stumptown
-                taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                adaptogen squid fanny pack vaporware.
-              </p>
-              <span
-                class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"
-              ></span>
-              <h2
-                class="text-gray-900 font-medium title-font tracking-wider text-sm"
-              >
-                ALPER KAMU
-              </h2>
-              <p class="text-gray-500">UI Develeoper</p>
-            </div>
-          </div>
-          <div class="lg:w-1/3 lg:mb-0 p-4">
-            <div class="h-full text-center">
-              <img
-                alt="testimonial"
-                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                src="https://dummyimage.com/305x305"
-              />
-              <p class="leading-relaxed">
-                Edison bulb retro cloud bread echo park, helvetica stumptown
-                taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                adaptogen squid fanny pack vaporware.
-              </p>
-              <span
-                class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"
-              ></span>
-              <h2
-                class="text-gray-900 font-medium title-font tracking-wider text-sm"
-              >
-                HENRY LETHAM
-              </h2>
-              <p class="text-gray-500">CTO</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="inline-block w-8 h-8 text-gray-400 mb-8"
-            viewBox="0 0 975.036 975.036"
-          >
-            <path
-              d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
-            ></path>
-          </svg>
-          <p class="leading-relaxed text-lg">
-            Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki
-            taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman
-            taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid
-            fanny pack vaporware. Man bun next level coloring book skateboard
-            four loko knausgaard. Kitsch keffiyeh master cleanse direct trade
-            indigo juice before they sold out gentrify plaid gastropub normcore
-            XOXO 90's pickled cindigo jean shorts. Slow-carb next level
-            shoindigoitch ethical authentic, yr scenester sriracha forage
-            franzen organic drinking vinegar.
-          </p>
-          <span
-            class="inline-block h-1 w-10 rounded bg-green-500 mt-8 mb-6"
-          ></span>
-          <h2
-            class="text-gray-900 font-medium title-font tracking-wider text-sm"
-          >
-            HOLDEN CAULFIELD
-          </h2>
-          <p class="text-gray-500">Senior Product Designer</p>
-        </div>
-      </div>
-    </section>
-    <footer
-      class="text-gray-600 body-font"
-      style="background-color: #e2f8e2; border-radius: 10px"
-    >
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-        <div class="lg:w-1/6 md:w-1/2 w-full px-4" style="margin: 40px">
-          <h2
-            class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
-          >
-           Job Portal
-          </h2>
-          <nav class="list-none mb-10">
-            <li>
-               <a class="text-gray-600 hover:text-gray-800">About Us</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Testimonials</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Send Feedback</a>
-            </li>
-          </nav>
-        </div>
-        <div class="lg:w-1/6 md:w-1/2 w-full px-4" style="margin: 40px">
-          <h2
-            class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
-          >
-            Job Seekers
-          </h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Login </a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Sign Up</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Search a Job</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Upload Resume</a>
-            </li>
-          </nav>
-        </div>
-       
-        <div class="lg:w-1/6 md:w-1/2 w-full px-4" style="margin: 40px">
-          <h2
-            class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
-          >
-            Social Media
-          </h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Facebook</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Instagram</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">LinkdIn</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Twitter</a>
-            </li>
-          </nav>
-        </div>
-        <div class="lg:w-1/6 md:w-1/2 w-full px-4" style="margin: 40px">
-          <h2
-            class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
-          >
-            Other Links
-          </h2>
-          <nav class="list-none mb-10">
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Terms of Use</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Private Policy</a>
-            </li>
 
-            <a class="text-gray-600 hover:text-gray-800">Placement Policy</a>
-            
-          </nav>
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                    </ol>
+                </nav>
+            </div>
         </div>
-      </div>
+        <!-- Header End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="row g-0 about-bg rounded overflow-hidden">
+                            <div class="col-6 text-start">
+                                <img class="img-fluid w-100" src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid" src="img/about-2.jpg" style="width: 85%; margin-top: 15%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid" src="img/about-3.jpg" style="width: 85%;">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid w-100" src="img/about-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">We Help To Get The Best Job And Find A Talent</h1>
+                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Company</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Contact</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Job Portal</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-      <div class="border-t border-gray-200">
-        <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
-          <span
-            class="inline-flex lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto"
-          >
-            <a class="text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-                ></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
-      <div class="bg-green-400">
-        <div
-          class="container mx-auto py-4 px-5 flex items-center justify-center"
-          style="color: black"
-        >
-          <p class="text-black-500 text-sm text-center sm:text-left">
-            © 2020 Tailblocks —
-            <a
-              href="https://twitter.com/knyttneve"
-              class="text-black-600 ml-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@knyttneve</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
 </html>
