@@ -79,3 +79,8 @@
     
 })(jQuery);
 
+const login= ()=>{
+    console.log('fired')
+    var select =document.getElementById('jobseeker')
+    select.checked='checked';
+}

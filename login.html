@@ -42,25 +42,17 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Confirm password" />
               </div>
-              <div class="input-group">
-                <div class="preferences">
-                  <div class="recruiter">
-                    <label for="recuriter">Recuriter</label>
-                    <input type="checkbox" id="recruiter" />
-                  </div>
-                  <div class="jobseeker">
-                    <label for="jobseeker">Jobseeker</label>
-                    <input type="checkbox" id="jobseeker" />
-                  </div>
-                </div>
-              </div>
+              
+              
               <button>Sign up</button>
               <p>
                 <span> Already have an account? </span>
                 <b onclick="toggle()" class="pointer"> Sign in here </b>
               </p>
+              <button onclick="homepage()"> Go to Home</button>
             </div>
           </div>
+          
         </div>
         <!-- END SIGN UP -->
         <!-- SIGN IN -->
@@ -75,14 +67,30 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Password" />
               </div>
+              <div class="input-group">
+                <div class="preferences">
+                  <div class="recruiter">
+                    <label for="recuriter">Recuriter</label>
+                    <input type="checkbox" id="recruiter" />
+                  </div>
+                  <div class="jobseeker">
+                    <label for="jobseeker">Jobseeker</label>
+                    <input type="checkbox" id="jobseeker" />
+                  </div>
+                </div>
+              </div>
               <button>Sign in</button>
+              
               <p>
                 <b> Forgot password? </b>
+
               </p>
+             
               <p>
                 <span> Don't have an account? </span>
                 <b onclick="toggle()" class="pointer"> Sign up here </b>
               </p>
+              <button onclick="homepage()"> Go to Home</button>
             </div>
           </div>
           <div class="form-wrapper"></div>
