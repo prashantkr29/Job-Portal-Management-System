@@ -92,6 +92,7 @@ nav i{
 
 .main-body{
     padding: 10px 10px 10px 20px;
+    text-align: center;
 }
 h1{
     margin: 20px;
@@ -120,3 +121,112 @@ h1{
 .search_bar .filter{
     width: 300px;
 }
+
+.filter{
+    background-color: #fff;
+}
+.Category{
+    background-color: #fff;
+}
+
+.user-profile{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.user-profile img{
+    width: 90px;
+    height: 90px;
+    border-radius: 85%;
+}
+h4{
+    margin-left: 150px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.description{
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 38px;
+    width: 402px;
+    height: 250px;
+    margin-bottom: 10px;    border: 1px ;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    left: 50px;
+    
+}
+.skills-container{
+    margin-left: 554px;
+    margin-top: -312px;
+}
+
+.skills{
+    display: inline-flex;
+    margin-top: 25px;
+    margin-left: 38px;
+   
+    width: 402px;
+    height: 250px;
+    margin-bottom: 10px;    border: 1px ;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    left: 50px;
+}
+
+.attendance{
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  .attendance-list{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    border-bottom: #ddd;
+  }
+  table thead tr{
+    color: #fff;
+    background: #34AF6D;
+    text-align: left;
+    font-weight: bold;
+  }
+  .table th,
+  .table td{
+    padding: 12px 15px;
+  }
+  .table tbody tr{
+    border-bottom: 1px solid #ddd;
+  }
+  .table tbody tr:nth-of-type(odd){
+    background: #f3f3f3;
+  }
+ 
+  .table tbody tr:last-of-type{
+    border-bottom: 2px solid #4AD489;
+  }
+  .table button{
+    padding: 6px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #4AD489;
+  }
+  .table button:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5rem;
+  }
