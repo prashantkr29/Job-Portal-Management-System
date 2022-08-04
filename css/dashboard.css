@@ -236,3 +236,34 @@ h4{
     padding-left: 10px;
     margin-top: 78px;
   }
+
+  .posted{
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 38px;
+    width: 402px;
+    height: 250px;
+    margin-bottom: 10px;    border: 1px ;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    left: 50px;
+    box-shadow: 0 20px 35px 0px rgba(0, 0, 0, 0.1);    
+  }
+  .Users-container{
+    margin-left: 554px;
+    margin-top: -312px;
+  }
+  .Users{
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 38px;
+    width: 402px;
+    height: 250px;
+    margin-bottom: 10px;    border: 1px ;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    left: 50px;
+    box-shadow: 0 20px 35px 0px rgba(0, 0, 0, 0.1);  
+  }
