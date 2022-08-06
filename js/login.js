@@ -22,11 +22,15 @@ function opendashboard(){
 	var rec=document.getElementById('recruiter');
 	var job=document.getElementById('jobseeker');
     
-    if(job.checked && rec.checked){alert("choose any one option")}
+    if(job.checked && rec.checked){
+		alert("choose any one option")}
 	else if(job.checked){
 		window.location.href="dashboard.html";
 	}
 	else if(rec.checked){
 		window.location.href="recruiter.html";
-	}else{alert("choose any one option"); }
+	}else
+	{
+		alert("choose any one option"); 
+	}
 }

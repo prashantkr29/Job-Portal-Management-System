@@ -20,31 +20,45 @@
       <div class="row">
         <!-- SIGN UP -->
         <div class="col align-items-center flex-col sign-up">
+          <form action="php/register.php" method="post">
           <div class="form-wrapper align-items-center">
             <div class="form sign-up">
               <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" name="username" />
               </div>
-              <div class="input-group">
+           <!--   <div class="input-group">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Unique Id" />
-              </div>
+              </div> -->
               <div class="input-group">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" />
               </div>
               <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name="password" />
               </div>
               <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Confirm password" />
+                <input type="password" placeholder="Confirm password" name="confirm_password" />
+              </div>
+              <div class="input-group">
+                <div class="preferences">
+                  <div class="recruiter">
+                    <label for="recuriter">Recuriter</label>
+                    <input type="checkbox" id="recruiter" />
+                  </div>
+                  <div class="jobseeker">
+                    <label for="jobseeker">Jobseeker</label>
+                    <input type="checkbox" id="jobseeker" />
+                  </div>
+                </div>
               </div>
               
               
               <button>Sign up</button>
+            </form>
               <p>
                 <span> Already have an account? </span>
                 <b onclick="toggle()" class="pointer"> Sign in here </b>
@@ -57,15 +71,16 @@
         <!-- END SIGN UP -->
         <!-- SIGN IN -->
         <div class="col align-items-center flex-col sign-in">
+          <form action="php/login.php" method="post">
           <div class="form-wrapper align-items-center">
             <div class="form sign-in">
               <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" name="username"/>
               </div>
               <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name="password"/>
               </div>
               <div class="input-group">
                 <div class="preferences">
@@ -80,7 +95,7 @@
                 </div>
               </div>
               <button onclick="opendashboard()">Sign in</button>
-              
+            </form>
               <p>
                 <b> Forgot password? </b>
 
