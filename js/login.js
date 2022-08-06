@@ -3,6 +3,7 @@
 
 let container = document.getElementById('container')
 
+
 const homepage =()=>{
 	window.location.href="index.html";
 }
@@ -33,4 +34,7 @@ function opendashboard(){
 	{
 		alert("choose any one option"); 
 	}
+}
+function backbutton(){
+	window.location.href="dashboard-job.html";
 }

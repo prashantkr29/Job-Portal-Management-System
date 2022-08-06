@@ -84,3 +84,5 @@ const login= ()=>{
     var select =document.getElementById('jobseeker')
     select.checked='checked';
 }
+
+
