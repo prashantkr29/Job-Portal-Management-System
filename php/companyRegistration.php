@@ -1,9 +1,17 @@
 <?php
-$CompanyID = $_POST['CompanyID'];
-$CompanyName = $_POST['CompanyName'];
-$ContactNumber = $_POST['ContactNumber'];
-$sql = "INSERT INTO COMPANY ('name', 'contact_number') VALUES ('$CompanyID', '$CompanyName', '$ContactNumber')";
-if(!mysqli_query($conn, $sql)){
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+require_once ('db.php');
+
+$CompanyID = $_POST['comp_id'];
+$CompanyName = $_POST['comp_name'];
+$ContactNumber = $_POST['cont_num'];
+
+$sql = "INSERT INTO `company`(`companyid`, `name`, `contact_number`) VALUES ('$CompanyID','$CompanyName','$ContactNumber')";
+if ($conn->query($sql) === TRUE) {
+    $script = "<script>
+    window.location.href='../dashboard.html';</script>";
+    echo $script;
+    echo "Company registered sucessfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 ?>

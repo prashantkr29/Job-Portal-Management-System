@@ -90,23 +90,22 @@
           <p>Explore the opportunites</p>
         </div></br>
         <h3 style="text-align: center;">Enter Company Details</h3>
-        <form action="">
+        <form action="php/companyRegistration.php" method="post">
         <div class="updation">
           <div class="mb-3">
             <label for="Company" class="form-label">Company ID</label>
-            <input type="text" class="form-control" id="Company" placeholder="">
+            <input type="text" class="form-control" id="Company" name="comp_id" placeholder="">
           </div>
             <div class="mb-3">
                 <label for="Company" class="form-label">Company Name</label>
-                <input type="text" class="form-control" id="Company" placeholder="">
+                <input type="text" class="form-control" id="Company" name="comp_name" placeholder="">
               </div>
        
           <div class="mb-3">
             <label for="numbercompany" class="form-label">Contact Number</label>
-            <input type="text" class="form-control" id="numbercompany" placeholder="888-444-5874">
+            <input type="text" class="form-control" id="numbercompany" name="cont_num" placeholder="888-444-5874">
           </div>
-         
-         
+
           <button type="button" class="btn btn-success">Register</button>
         </div>
       </form>
