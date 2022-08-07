@@ -69,40 +69,40 @@
             </div>
             </br>
             <h3 style="text-align: center;">Enter the details for the Job</h3>
-            <form action="">
                 <div class="updation">
+                    <form action="" method="post">
                     <div class="mb-3">
                         <label for="Company" class="form-label">Company ID</label>
-                        <input type="text" class="form-control" id="Company" placeholder="">
+                        <input type="text" class="form-control" id="Company" name="comp_id" placeholder="">
                       </div>
                       <div class="mb-3">
                         <label for="Job" class="form-label">Job ID</label>
-                        <input type="text" class="form-control" id="Job" placeholder="">
+                        <input type="text" class="form-control" id="Job" name="job_id" placeholder="">
                       </div>
 
                 
 
                     <div class="mb-3">
                         <label for="Designation" class="form-label">Designation</label>
-                        <input type="text" class="form-control" id="Designation" placeholder="eg.Software Engineer">
+                        <input type="text" class="form-control" id="Designation" name="designation" placeholder="eg.Software Engineer">
                     </div>
                     <div class="mb-3">
                         <label for="Location" class="form-label">Location</label>
-                        <input type="text" class="form-control" id="Location" placeholder="eg. india">
+                        <input type="text" class="form-control" id="Location" name="location" placeholder="eg. india">
                     </div>
 
                     <div class="mb-3">
                         <label for="Salary" class="form-label">Salary</label>
-                        <input type="text" class="form-control" id="Salary" placeholder="">
+                        <input type="text" class="form-control" id="Salary" name="salary" placeholder="">
                     </div>
 
                     <div class="mb-3">
                         <label for="Designation" class="form-label"> Description</label>
-                        <textarea class="form-control" id="Description" rows="3"></textarea>
+                        <textarea class="form-control" id="Description" name="description" rows="3"></textarea>
                     </div>
                     <button type="button" class="btn btn-success">Post</button>
+                    </form>
                 </div>
-            </form>
         </section>
 
 
