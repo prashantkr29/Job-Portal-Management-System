@@ -18,17 +18,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     }
 
-    $uname = validate($_POST['username']);
+    $username = validate($_POST['username']);
 
-    $pass = validate($_POST['password']);
+    $password = validate($_POST['password']);
 
-    if (empty($uname)) {
+    if (empty($username)) {
 
         header("Location: index.php?error=User Name is required");
 
         exit();
 
-    }else if(empty($pass)){
+    }else if(empty($password)){
 
         header("Location: index.php?error=Password is required");
 
@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     }else{
 
-        $sql = "SELECT * FROM user WHERE username='$uname' AND password='$pass'";
+        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -44,7 +44,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['username'] === $uname && $row['password'] === $pass) {
+            if ($row['username'] === $username && $row['password'] === $password) {
 
                 echo "Logged in!";
 
@@ -82,8 +82,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $script = "<script>
                 window.location.href='../index.html';</script>";
                     echo $script;
-    
-
     exit();
 
 }
