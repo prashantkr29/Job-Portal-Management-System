@@ -2,7 +2,7 @@
 
 session_start(); 
 
-include "db.php";
+include_once "db.php";
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
@@ -46,17 +46,27 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
             if ($row['username'] === $username && $row['password'] === $password) {
 
-                echo "Logged in!";
+                #echo "Logged in!";
 
                 $_SESSION['username'] = $row['username'];
 
-                $_SESSION['name'] = $row['name'];
 
-                $_SESSION['id'] = $row['id'];
-
-                $script = "<script>
-                window.location.href='../dashboard.html';</script>";
-                    echo $script;
+                #TO handle Checkbox with if else statement
+                if(isset($_POST['check_recruit']) && 
+                  $_POST['check_recruit'] == 'A') 
+                {
+                    
+                    $script = "<script>
+                     window.location.href='../recruiter.html';</script>";
+                        echo $script;
+                }
+                else if(isset($_POST['user']) && 
+                $_POST['user'] == 'B')
+                {
+                    $script = "<script>
+                    window.location.href='../dashboard.html';</script>";
+                       echo $script;
+                }
 
                 exit();
 
