@@ -8,7 +8,7 @@ if(!$conn){
  die('Could not Connect My Sql:' .mysql_error());
 }
 else{
-echo "Connected Sucessfully";
+#echo "Connected Sucessfully";
 }
 
 ?>
