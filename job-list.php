@@ -176,9 +176,14 @@ include_once('php/db.php');
                                     <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-3.jpg" alt="" style="width: 80px; height: 80px;">
                                         <div class="text-start ps-4">
-                                        <?php
-                                           echo "This is Placeholder 2";
-                                           ?>
+                                        <span>Name:</span> <?php 
+                                        $sql = "Select * from `job_post` where jobid=101";
+                                        $result = $conn->query($sql);
+                                        $row = $result->fetch_assoc();
+                                        echo "This is Name" ?>
+                                        <span>E-mail:</span> <?php echo $row['salary'] ?>
+                                        <span>Contact No:</span> <?php echo $row['designation'] ?>
+                                        <span>Address:</span> <?php echo $row['description'] ?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
@@ -214,9 +219,14 @@ include_once('php/db.php');
                                     <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-5.jpg" alt="" style="width: 80px; height: 80px;">
                                         <div class="text-start ps-4">
-                                        <?php
-                                           echo "This is Placeholder 4";
-                                           ?>
+                                        <span>Name:</span> <?php 
+                                        $sql = "Select * from `job_post` where jobid=101";
+                                        $result = $conn->query($sql);
+                                        $row = $result->fetch_assoc();
+                                        echo "This is Name" ?>
+                                        <span>E-mail:</span> <?php echo $row['salary'] ?>
+                                        <span>Contact No:</span> <?php echo $row['designation'] ?>
+                                        <span>Address:</span> <?php echo $row['description'] ?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
@@ -237,9 +247,14 @@ include_once('php/db.php');
                                     <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-1.jpg" alt="" style="width: 80px; height: 80px;">
                                         <div class="text-start ps-4">
-                                        <?php
-                                           echo "This is Placeholder 5";
-                                           ?>
+                                        <span>Name:</span> <?php 
+                                        $sql = "Select * from `job_post` where jobid=101";
+                                        $result = $conn->query($sql);
+                                        $row = $result->fetch_assoc();
+                                        echo "This is Name" ?>
+                                        <span>E-mail:</span> <?php echo $row['salary'] ?>
+                                        <span>Contact No:</span> <?php echo $row['designation'] ?>
+                                        <span>Address:</span> <?php echo $row['description'] ?>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
