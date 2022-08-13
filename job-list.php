@@ -133,7 +133,7 @@ include_once('php/db.php');
                                     <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-1.jpg" alt="" style="width: 80px; height: 80px;">
                                         <div class="text-start ps-4">
-                                        <span>Name:</span> <?php 
+                                      <?php 
                                         $sql = "Select * from `job_post` where jobid=101";
                                         $result = $conn->query($sql);
                                         $row = $result->fetch_assoc();
