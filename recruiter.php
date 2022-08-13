@@ -1,3 +1,11 @@
+<?php
+include_once('php/db.php');
+$sql = "Select * from `job-post` where recid=2";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -114,6 +122,7 @@
             </div>
             <h4>No of Users Applied</h4>
         </div> -->
+      
           <section class="attendance" style="margin-left: 30px">
             <div class="attendance-list">
               <h1 style="text-align: center;">Job Posted</h1>
@@ -133,37 +142,61 @@
                   <tr>
                     <td>01</td>
                     <!-- <td>Sam David</td> -->
-                    <td>Design</td>
+                    <td><?php
+                                echo $row['designation'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
+                    <td><?php
+                                echo $row['salary'];
+                                ?></td>
+                    <td><?php
+                                echo $row['location'];
+                                ?></td>
                     
                   </tr>
                   <tr class="active">
                     <td>02</td>
                     <!-- <td>Balbina Kherr</td> -->
-                    <td>Coding</td>
+                    <td><?php
+                                echo $row['designation'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>9:00AM</td>
-                    <td>4:00PM</td>
+                    <td><?php
+                                echo $row['salary'];
+                                ?></td>
+                    <td><?php
+                                echo $row['location'];
+                                ?></td>
                     
                   </tr>
                   <tr>
                     <td>03</td>
                     <!-- <td>Badan John</td> -->
-                    <td>testing</td>
+                    <td><?php
+                                echo $row['designation'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
+                    <td><?php
+                                echo $row['salary'];
+                                ?></td>
+                    <td><?php
+                                echo $row['location'];
+                                ?></td>
                     
                   </tr>
                   <tr>
                     <td>04</td>
                     <!-- <td>Sara David</td> -->
-                    <td>Design</td>
+                    <td><?php
+                                echo $row['designation'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
+                    <td><?php
+                                echo $row['salary'];
+                                ?></td>
+                    <td><?php
+                                echo $row['location'];
+                                ?></td>
                     
                   </tr>
                 </tbody>
@@ -171,6 +204,12 @@
           </div>
         </section>  
         <section class="attendance" style="margin-left: 30px">
+        <?php
+include_once('php/db.php');
+$sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=2)";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
             <div class="attendance-list">
               <h1 style="text-align: center;">User Applied</h1>
               <table class="table">
@@ -189,38 +228,70 @@
                   <tr>
                     <td>01</td>
                     <!-- <td>Sam David</td> -->
-                    <td>Design</td>
+                    <td><?php
+                                echo $row['jobid'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td>random email</td>
+                    <td><?php
+                                echo $row['name'];
+                                ?></td>
+                    <td><?php
+                                echo $row['contact'];
+                                ?></td>
+                    <td><?php
+                                echo $row['email'];
+                                ?></td>
                   </tr>
                   <tr class="active">
                     <td>02</td>
                     <!-- <td>Balbina Kherr</td> -->
-                    <td>Coding</td>
+                    <td><?php
+                                echo $row['jobid'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>9:00AM</td>
-                    <td>4:00PM</td>
-                    <td>random email</td>
+                    <td><?php
+                                echo $row['name'];
+                                ?></td>
+                    <td><?php
+                                echo $row['contact'];
+                                ?></td>
+                    <td><?php
+                                echo $row['email'];
+                                ?></td>
                   </tr>
                   <tr>
                     <td>03</td>
                     <!-- <td>Badan John</td> -->
-                    <td>testing</td>
+                    <td><?php
+                                echo $row['jobid'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td>random email</td>
+                    <td><?php
+                                echo $row['name'];
+                                ?></td>
+                    <td><?php
+                                echo $row['contact'];
+                                ?></td>
+                    <td><?php
+                                echo $row['email'];
+                                ?></td>
                   </tr>
                   <tr>
                     <td>04</td>
                     <!-- <td>Sara David</td> -->
-                    <td>Design</td>
+                    <td><?php
+                                echo $row['jobid'];
+                                ?></td>
                     <!-- <td>03-24-22</td> -->
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td>random email</td>
+                    <td><?php
+                                echo $row['name'];
+                                ?></td>
+                    <td><?php
+                                echo $row['contact'];
+                                ?></td>
+                    <td><?php
+                                echo $row['email'];
+                                ?></td>
                   </tr>
                 </tbody>
             </table>
