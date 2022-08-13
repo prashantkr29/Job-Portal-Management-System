@@ -4,13 +4,14 @@ require_once ('db.php');
 $CompanyID = $_POST["comp_id"];
 $CompanyName = $_POST["comp_name"];
 $ContactNumber = $_POST["cont_num"];
+$location = $_POST["location"];
 
-$sql = "INSERT INTO `company`(`companyid`, `name`, `contact_number`) VALUES ('$CompanyID','$CompanyName','$ContactNumber')";
+$sql = "INSERT INTO `company`(`compid`, `name`, `contact`,`location`) VALUES ('$CompanyID','$CompanyName','$ContactNumber','$location')";
 if ($conn->query($sql) === TRUE) {
-    $script = "<script>
+    $scipt = "<script>alert('Company Registered Successfully');
     window.location.href='../recruiter-register.html';</script>";
-    echo $script;
-    echo "Company registered sucessfully";
+    echo $scipt;
+    
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

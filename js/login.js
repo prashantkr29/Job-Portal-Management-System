@@ -36,5 +36,5 @@ function opendashboard(){
 	}
 }
 function backbutton(){
-	window.location.href="dashboard-job.html";
+	window.location.href="dashboard-job.php";
 }

@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     }else{
 
-        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+        $sql = "SELECT * FROM recruiter WHERE username='$username' AND password='$password'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -57,14 +57,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 {
                     
                     $script = "<script>
-                     window.location.href='../recruiter.html';</script>";
+                     window.location.href='../recruiter.php';</script>";
                         echo $script;
                 }
                 else if(isset($_POST['user']) && 
                 $_POST['user'] == 'B')
                 {
                     $script = "<script>
-                    window.location.href='../dashboard.html';</script>";
+                    window.location.href='../dashboard.php';</script>";
                        echo $script;
                 }
 

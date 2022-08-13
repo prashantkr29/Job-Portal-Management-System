@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <form class="container">
+    <div class="container">
         <nav>
             <div class="navbar">
                 <div class="logo">
@@ -41,7 +41,7 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="recruiter.html"><i class="fas fa-user"></i>
+                        <a href="recruiter.php"><i class="fas fa-user"></i>
                             <span class="nav-item">Dashboard</span></a>
                     </li>
                     <li>
@@ -63,6 +63,7 @@
                 </ul>
             </div>
         </nav>
+     
         <section class="main">
             <div class="main-top">
                 <p>Explore the opportunites</p>
@@ -70,21 +71,23 @@
             </br>
             <h3 style="text-align: center;">Enter the details for the Job</h3>
                 <div class="updation">
-                    <form action="" method="post">
+                    <form action="php/postjob.php" method="post">
+
                     <div class="mb-3">
-                        <label for="Company" class="form-label">Company ID</label>
-                        <input type="text" class="form-control" id="Company" name="comp_id" placeholder="">
+                        <label for="Company" class="form-label">Recruiter ID</label>
+                        <input type="text" class="form-control" id="Recruiter" name="recid" placeholder="">
                       </div>
                       <div class="mb-3">
-                        <label for="Job" class="form-label">Job ID</label>
-                        <input type="text" class="form-control" id="Job" name="job_id" placeholder="">
+                        <label for="Company" class="form-label">Company ID</label>
+                        <input type="text" class="form-control" id="Company" name="compid" placeholder="">
                       </div>
-
-                
-
                     <div class="mb-3">
                         <label for="Designation" class="form-label">Designation</label>
                         <input type="text" class="form-control" id="Designation" name="designation" placeholder="eg.Software Engineer">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Company Name" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="Company Name" name="compname" placeholder="eg. Google, facebook etc">
                     </div>
                     <div class="mb-3">
                         <label for="Location" class="form-label">Location</label>
@@ -100,12 +103,12 @@
                         <label for="Designation" class="form-label"> Description</label>
                         <textarea class="form-control" id="Description" name="description" rows="3"></textarea>
                     </div>
-                    <button type="button" class="btn btn-success">Post</button>
-                    </form>
+                    <button class="btn btn-success">Post</button>
+                   </form> 
                 </div>
         </section>
 
-
+</div>
 
 
 </body>
