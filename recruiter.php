@@ -1,6 +1,6 @@
 <?php
 include_once('php/db.php');
-$sql = "Select * from `job-post` where recid=2";
+$sql = "Select * from `job-post` where recid=3";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
@@ -206,7 +206,7 @@ $row = $result->fetch_assoc();
         <section class="attendance" style="margin-left: 30px">
         <?php
 include_once('php/db.php');
-$sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=2)";
+$sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=3)";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
