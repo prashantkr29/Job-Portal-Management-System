@@ -85,4 +85,6 @@ const login= ()=>{
     select.checked='checked';
 }
 
-
+const click = ()=>{
+    window.location.href="job-detail.php";
+}

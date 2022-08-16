@@ -1,9 +1,4 @@
-<?php
-include_once('php/db.php');
-$sql = "Select * from `job-post` where recid=3";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-?>
+
 
 
 <!DOCTYPE html>
@@ -79,12 +74,7 @@ $row = $result->fetch_assoc();
                 <span class="nav-item">List a Job</span></a
               >
             </li>
-            <li>
-              <a href="recruiter-settings.html"
-                ><i class="fas fa-tasks"></i>
-                <span class="nav-item">Settings</span></a
-              >
-            </li>
+            
             <li>
               <a href="login.html" class="Logout"
                 ><i class="fas fa-sign-out-alt"></i>
@@ -106,22 +96,7 @@ $row = $result->fetch_assoc();
             <h1>Recruiter Name</h1>
         </div>
 
-          <!-- <div class="posted-container">
-            <div class="posted">
-              <p style="padding: 32px">
-              Total Jobs posted value
-              </p>
-            </div>
-            <h4>Total Job Posted</h4>
-        </div>
-        <div class="Users-container">
-            <div class="Users">
-              <p style="padding: 32px">
-              Users applied values
-              </p>
-            </div>
-            <h4>No of Users Applied</h4>
-        </div> -->
+          
       
           <section class="attendance" style="margin-left: 30px">
             <div class="attendance-list">
@@ -130,85 +105,27 @@ $row = $result->fetch_assoc();
                 <thead>
                   <tr>
                     <th>JobID</th>
-                    <!-- <th>Company Name</th> -->
                     <th>Designation</th>
-                    <!-- <th>Applied Date</th> -->
                     <th>Salary</th>
                     <th>Location</th>
-                   
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <!-- <td>Sam David</td> -->
-                    <td><?php
-                                echo $row['designation'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['salary'];
-                                ?></td>
-                    <td><?php
-                                echo $row['location'];
-                                ?></td>
-                    
-                  </tr>
-                  <tr class="active">
-                    <td>02</td>
-                    <!-- <td>Balbina Kherr</td> -->
-                    <td><?php
-                                echo $row['designation'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['salary'];
-                                ?></td>
-                    <td><?php
-                                echo $row['location'];
-                                ?></td>
-                    
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <!-- <td>Badan John</td> -->
-                    <td><?php
-                                echo $row['designation'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['salary'];
-                                ?></td>
-                    <td><?php
-                                echo $row['location'];
-                                ?></td>
-                    
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <!-- <td>Sara David</td> -->
-                    <td><?php
-                                echo $row['designation'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['salary'];
-                                ?></td>
-                    <td><?php
-                                echo $row['location'];
-                                ?></td>
-                    
-                  </tr>
-                </tbody>
+                <?php
+                include_once('php/db.php');
+                $sql = "Select * from `job-post` where recid=4";
+                $result = $conn->query($sql);
+                while($row = $result->fetch_assoc()){
+                  echo "<tr><td>". $row["jobid"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"] ."</td></tr>";
+                }
+                echo "</table>";
+                ?>
+                
             </table>
           </div>
         </section>  
         <section class="attendance" style="margin-left: 30px">
         <?php
-include_once('php/db.php');
-$sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=3)";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
+
 ?>
             <div class="attendance-list">
               <h1 style="text-align: center;">User Applied</h1>
@@ -216,86 +133,22 @@ $row = $result->fetch_assoc();
                 <thead>
                   <tr>
                     <th>UserID</th>
-                    <!-- <th>Company Name</th> -->
                     <th>JobID</th>
-                    <!-- <th>Applied Date</th> -->
                     <th>Name</th>
                     <th>Contact Number</th>
                     <th>Email</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <!-- <td>Sam David</td> -->
-                    <td><?php
-                                echo $row['jobid'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['name'];
-                                ?></td>
-                    <td><?php
-                                echo $row['contact'];
-                                ?></td>
-                    <td><?php
-                                echo $row['email'];
-                                ?></td>
-                  </tr>
-                  <tr class="active">
-                    <td>02</td>
-                    <!-- <td>Balbina Kherr</td> -->
-                    <td><?php
-                                echo $row['jobid'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['name'];
-                                ?></td>
-                    <td><?php
-                                echo $row['contact'];
-                                ?></td>
-                    <td><?php
-                                echo $row['email'];
-                                ?></td>
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <!-- <td>Badan John</td> -->
-                    <td><?php
-                                echo $row['jobid'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['name'];
-                                ?></td>
-                    <td><?php
-                                echo $row['contact'];
-                                ?></td>
-                    <td><?php
-                                echo $row['email'];
-                                ?></td>
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <!-- <td>Sara David</td> -->
-                    <td><?php
-                                echo $row['jobid'];
-                                ?></td>
-                    <!-- <td>03-24-22</td> -->
-                    <td><?php
-                                echo $row['name'];
-                                ?></td>
-                    <td><?php
-                                echo $row['contact'];
-                                ?></td>
-                    <td><?php
-                                echo $row['email'];
-                                ?></td>
-                  </tr>
-                </tbody>
-            </table>
-          </div>
-        </section> 
+                <?php
+                include_once('php/db.php');
+                $sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=3)";
+                $result = $conn->query($sql);
+                while($row = $result->fetch_assoc()){
+                  echo "<tr><td>". $row["userid"]."<tr><td>". $row["jobid"]."</td><td>". $row["name"]."</td><td>". $row["contact"]."</td><td>".$row["email"] ."</td></tr>";
+                }
+                echo "</table>";
+              ?>
+
+         
       </section>
 </body>

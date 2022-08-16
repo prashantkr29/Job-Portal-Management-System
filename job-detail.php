@@ -68,9 +68,9 @@ $row = $result->fetch_assoc();
                                         class="fa fa-map-marker-alt text-primary me-2"></i><?php
                                 echo $row['location'];
                                 ?></span>
-                                <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"><?php
+                                <span class="text-truncate me-3"><?php
                                 echo $row['company'];
-                                ?></i></span>
+                                ?></span>
                                 <span class="text-truncate me-0"><i
                                         class="far fa-money-bill-alt text-primary me-2"></i><?php  echo $row["salary"];?></span>
                             </div>

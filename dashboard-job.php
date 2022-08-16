@@ -1,9 +1,4 @@
-<?php
-include_once('php/db.php');
-$sql = "Select * from `job-post` where jobid=3";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-?>
+
 
 
 <!DOCTYPE html>
@@ -49,23 +44,18 @@ $row = $result->fetch_assoc();
           </div>
           <ul>
             <li>
-              <a href="dashboard.html"
+              <a href="dashboard.php"
                 ><i class="fas fa-user"></i>
                 <span class="nav-item">Dashboard</span></a
               >
             </li>
             <li>
-              <a href="dashboard-job.html"
+              <a href="dashboard-job.php"
                 ><i class="fas fa-chart-bar"></i>
                 <span class="nav-item">Job Listing</span></a
               >
             </li>
-            <li>
-              <a href="dashboard-settings.html"
-                ><i class="fas fa-tasks"></i>
-                <span class="nav-item">Settings</span></a
-              >
-            </li>
+            
             <li>
               <a href="login.html" class="Logout"
                 ><i class="fas fa-sign-out-alt"></i>
@@ -84,118 +74,35 @@ $row = $result->fetch_assoc();
         </div>
         <div class="search_bar"">
             <input type="search" placeholder="Search job here.." />
-         
-        </div>
-        <div class="container-xxl py-5">
+         </div>
+         <table class="table">
+                <thead>
+                  <tr>
+                    <th>company Name</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>Location</th>
+                    <th>details</th>
+                   </tr>
+                </thead>
+                <?php include_once('php/db.php');
+                      $sql = "Select * from `job-post`";
+                      $result = $conn->query($sql);
+
+
+                      while($row = $result->fetch_assoc()){
+                        echo "<tr><td>". $row["company"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"] ."</td><td><a class='btn btn-primary' href='job-detail.php'>Apply Now</a></td></tr>";          
+                      }
+                     echo "</table>"  
+                 ?>
+
           
-            <div class="container">
-             
-              <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
-                  
-                  <div class="tab-content" style="padding-left: 190px;">
-                      <div id="tab-1" class="tab-pane fade show p-0 active">
-                          <div class="job-item p-4 mb-4">
-                              <div class="row g-4">
-                                  <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                      <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-1.jpg" alt="" style="width: 80px; height: 80px;">
-                                      <div class="text-start ps-4">
-                                          <h5 class="mb-3"><?php
-                                          echo $row["designation"];
-                                          ?></h5>
-                                          <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?php echo $row["location"]; ?></span>
-                                          <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo $row["company"]; ?></span>
-                                          <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i><?php echo $row["salary"]; ?></span>
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                      <div class="d-flex mb-3">
-                                          <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
-                                          <a class="btn btn-primary" href="job-detail.php">Apply Now</a>
-                                      </div>
-                                      <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</small>
-                                  </div>
-                              </div>
-                          </div>
-                          
-                          <div class="job-item p-4 mb-4">
-                              <div class="row g-4">
-                                  <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                      <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-3.jpg" alt="" style="width: 80px; height: 80px;">
-                                      <div class="text-start ps-4">
-                                          <h5 class="mb-3"><?php
-                                          echo $row["designation"];
-                                          ?></h5>
-                                          <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?php echo $row["location"]; ?></span>
-                                          <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo $row["company"]; ?></span>
-                                          <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i><?php echo $row["salary"]; ?></span>
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                      <div class="d-flex mb-3">
-                                          <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
-                                          <a class="btn btn-primary" href="job-detail.php">Apply Now</a>
-                                      </div>
-                                      <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</small>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="job-item p-4 mb-4">
-                              <div class="row g-4">
-                                  <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                      <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-4.jpg" alt="" style="width: 80px; height: 80px;">
-                                      <div class="text-start ps-4">
-                                          <h5 class="mb-3"><?php
-                                          echo $row["designation"];
-                                          ?></h5>
-                                          <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?php echo $row["location"]; ?></span>
-                                          <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo $row["company"]; ?></span>
-                                          <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i><?php echo $row["salary"]; ?></span>
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                      <div class="d-flex mb-3">
-                                          <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
-                                          <a class="btn btn-primary" href="job-detail.php">Apply Now</a>
-                                      </div>
-                                      <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</small>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="job-item p-4 mb-4">
-                              <div class="row g-4">
-                                  <div class="col-sm-12 col-md-8 d-flex align-items-center">
-                                      <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-5.jpg" alt="" style="width: 80px; height: 80px;">
-                                      <div class="text-start ps-4">
-                                          <h5 class="mb-3"><?php
-                                          echo $row["designation"];
-                                          ?></h5>
-                                          <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i><?php echo $row["location"]; ?></span>
-                                          <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i><?php echo $row["company"]; ?></span>
-                                          <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i><?php echo $row["salary"]; ?></span>
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                      <div class="d-flex mb-3">
-                                          <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
-                                          <a class="btn btn-primary" href="job-detail.php">Apply Now</a>
-                                      </div>
-                                      <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</small>
-                                  </div>
-                              </div>
-                          </div>
-                          <a class="btn btn-primary py-3 px-5" href="">Browse More Jobs</a>
-                      </div>
-                      
-                   
-                         
-                        
-                      
-                  </div>
-              </div>
-          </div>
-      </div>
+       
 
       </section>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
+
+                      
