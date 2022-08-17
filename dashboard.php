@@ -129,10 +129,10 @@
               </thead>
               <?php
                include_once('php/db.php');
-               $sql = "Select * from `job-post` where jobid=(select jobid from `applied` where userid = 3)";
+               $sql = "Select * from `job-post` where jobid=(select jobid from `applied` where userid = 4)";
                $result = $conn->query($sql);
                while($row = $result->fetch_assoc()){
-                echo "<tr><td>". $row["jobid"]."<tr><td>". $row["company"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"];
+                echo "<tr><td>". $row["jobid"]."</td><td>". $row["company"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"];
                }
                echo "</table>";
               ?>

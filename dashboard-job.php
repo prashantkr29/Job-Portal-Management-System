@@ -78,6 +78,7 @@
          <table class="table">
                 <thead>
                   <tr>
+                    <th>RecruiterId</th>
                     <th>company Name</th>
                     <th>Designation</th>
                     <th>Salary</th>
@@ -91,7 +92,7 @@
 
 
                       while($row = $result->fetch_assoc()){
-                        echo "<tr><td>". $row["company"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"] ."</td><td><a class='btn btn-primary' href='job-detail.php'>Apply Now</a></td></tr>";          
+                        echo "<tr><td>". $row["recid"]."</td><td>". $row["company"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"] ."</td><td><a class='btn btn-primary' href='job-detail.php'>Apply Now</a></td></td>";          
                       }
                      echo "</table>"  
                  ?>

@@ -112,7 +112,7 @@
                 </thead>
                 <?php
                 include_once('php/db.php');
-                $sql = "Select * from `job-post` where recid=4";
+                $sql = "Select * from `job-post` where recid=2";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
                   echo "<tr><td>". $row["jobid"]."</td><td>". $row["designation"]."</td><td>". $row["salary"]."</td><td>".$row["location"] ."</td></tr>";
@@ -141,10 +141,10 @@
                 </thead>
                 <?php
                 include_once('php/db.php');
-                $sql = "Select * from `applied` where jobid=(Select jobid from `job-post` where recid=3)";
+                $sql = "Select * from `applied` where jobid in(Select jobid from `job-post` where recid=2)";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
-                  echo "<tr><td>". $row["userid"]."<tr><td>". $row["jobid"]."</td><td>". $row["name"]."</td><td>". $row["contact"]."</td><td>".$row["email"] ."</td></tr>";
+                  echo "<tr><td>". $row["userid"]."</td><td>". $row["jobid"]."</td><td>". $row["name"]."</td><td>". $row["contact"]."</td><td>".$row["email"] ."</td></td>";
                 }
                 echo "</table>";
               ?>

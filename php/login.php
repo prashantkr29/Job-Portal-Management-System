@@ -79,7 +79,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
              }                 
 
         }else{
-            
+            echo "invlaid login";
         }
     }
 }else{
